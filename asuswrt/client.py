@@ -92,6 +92,12 @@ class AsusWRT:
         Get WAN state
         '''
         return self.get('wanlink_state(appobj)')
+    
+    def update_client_list(self):
+        '''
+        Update online clients list
+        '''
+        return self.apply({'action_mode': 'update_client_list', 'action_wait': '1'})
 
     def get_online_clients(self):
         '''
